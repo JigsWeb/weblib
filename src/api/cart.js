@@ -1,4 +1,3 @@
-import { product } from ".";
 import { nanoid } from '@reduxjs/toolkit';
 
 let cart = [];

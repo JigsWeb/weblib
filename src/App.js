@@ -5,7 +5,6 @@ import { selectAllProducts, fetchProducts, selectHasMoreProducts } from './redux
 import { selectCartQuantityByProductId, upsertCartItems, removeCartItem, removeAllCartItems } from './redux/modules/cart'
 
 import './App.scss';
-import { product } from './api';
 
 function Header() {
   return (
@@ -93,7 +92,7 @@ function ProductList() {
     
     if (products.length && hasMoreProducts && !hasScrollBar)
       setQuery({ limit, offset: offset + limit })
-  }, [products, hasMoreProducts])
+  }, [products, hasMoreProducts, limit, offset])
 
   const handleScroll = () => {
     const maxScroll = containerRef.current.scrollHeight - containerRef.current.clientHeight;
